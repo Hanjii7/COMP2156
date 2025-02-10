@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - "stable"
 dist: focal
+  - yes | gem update --system --force
+  - gem install bundler
+  - gem install uri
+  - gem install logger
 deploy:
   provider: pages
   skip_cleanup: true
@@ -9,3 +13,4 @@ deploy:
   local_dir: build
   on:
     branch: main
+  
